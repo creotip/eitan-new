@@ -1,0 +1,571 @@
+
+
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/VKKpdi1QvieDs1ewFsxdAg.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/-fe1N1QeP0UtBmYG66PGsA.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/9TMYrMQsWjH1a-MkCFFAmg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/_mlO9_1N7oXYhEnEzC2l-g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v7/WdwM2J7q9PjwEDtfaHmmmxTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v7/UVNnZWb9UilkxwgKrV-6TBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v7/XwD9N0jIpRr71ymtU2S41BTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v7/IUSlgBbgyuDQpy87mBOAc_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+// Start with assigning color names to specific hex values.
+//
+// Color system
+//
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #03a9f4 !default;
+$indigo: #3f51b5 !default;
+$purple: #673ab7 !default;
+$pink: #e91e63 !default;
+$red: #f44336 !default;
+$orange: #ff5722 !default;
+$yellow: #ffab00 !default;
+$green: #8bc34a !default;
+$teal: #009688 !default;
+$cyan: #00bcd4 !default;
+
+// Reassign color vars to semantic color scheme
+$theme-colors: (
+        primary: #294464,
+        secondary: $gray-600,
+        success: $green,
+        info: $cyan,
+        warning: $yellow,
+        danger: $red,
+        light: $gray-100,
+        dark: $gray-800
+) !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-gradients: false !default;
+$enable-transitions: false !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (sm: 540px, md: 640px, lg: 740px, xl: 840px) !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $gray-700 !default;
+$inverse-bg: $gray-900 !default;
+$inverse-color: $gray-600 !default;
+
+// Links
+//
+// Style anchor elements.
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+'Segoe UI Symbol' !default;
+$font-family-monospace: 'BasisGrotesqueProMonoRegular', 'andale mono',
+'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+monospace !default;
+$font-hebrew: 'Rubik', sans-serif !default;
+
+$font-family-base: $font-hebrew !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.25rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-xs: 0.75rem !default;
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$h1-font-size: 1.6rem !default;
+$h2-font-size: 1.4rem !default;
+$h3-font-size: 1.2rem !default;
+$h4-font-size: 1.1rem !default;
+$h5-font-size: 1.05rem !default;
+$h6-font-size: 1rem !default;
+
+// $headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: inherit !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+
+$display1-size: 6rem !default;
+$display2-size: 5.5rem !default;
+$display3-size: 4.5rem !default;
+$display4-size: 3.5rem !default;
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import "../styles/helper";
+@import "../styles/typography";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-align: right;
+  background: rgb(1, 21, 46);
+  font-size: 15px;
+}
+
+.white {
+  color: #ffffff;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+img:hover {
+
+}
+
+.container-fluid {
+  max-width: 980px;
+}
+
+.main-content {
+  background: white;
+  @media (min-width: 576px) {
+    padding-left: 21em;
+    padding-top: 35px;
+    min-height: 590px;
+  }
+  .blog {
+
+  }
+}
+
+.main-sidebar {
+  position: absolute;
+  left: 40px;
+  top: 6px;
+  background: url('../assets/sidebar.png');
+  background-position: top;
+  background-size: 100%;
+  width: 278px;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 424px;
+  z-index: 99999;
+  display: none;
+  @media (min-width: 576px) {
+    display: block;
+  }
+
+  .sidebar {
+
+  }
+
+  .top-block {
+
+    padding: 15px 2rem 0 2rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    h2 {
+      font-weight: 500;
+    }
+  }
+
+  .bottom-block {
+
+    padding: 50px;
+    letter-spacing: 1px;
+
+    img {
+      max-width: 120px;
+    }
+
+    .piskei-list {
+      padding-right: 0;
+      list-style-type: none;
+      li {
+        margin-bottom: 10px;
+        background: url('../assets/list-blue.png');
+        background-position: 100% -4px;
+        padding-bottom: 0px;
+        background-repeat: no-repeat;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.header {
+  background: url('../assets/header-bg.jpeg');
+  position: relative;
+  background-position: 270px !important;
+  background-size: auto;
+  padding: 10px 0 0 0;
+  margin: 5px 0 0 0;
+
+  .navbar {
+    background: linear-gradient(to bottom, #5482b4 1%, #2e5585 10%, #2c4e7b 36%, #234165 80%, #203d63 87%, #244061 93%, #6285b3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2C4E7B ', endColorstr='#2C4E7B', GradientType=0);
+
+    padding: 4px 1rem;
+
+    .navbar-nav {
+      padding: 0;
+      .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      .nav-link {
+        color: #E6F5FF;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-left: 1px solid #2b4c77;
+        transition: all 300ms ease-in-out;
+        border-top: 2px solid transparent;
+      }
+      .nav-link:hover {
+        background-color: #CEEDFF;
+        box-shadow: inset 0 0 12px rgba(39, 81, 150, 0.8), inset 0 0 8px rgba(0, 0, 0, 0.3);
+        color: #2D384A;
+      }
+
+      .nav-item.active .nav-link {
+        text-shadow: 0 0 6px rgba(64, 159, 255, 0.5);
+        border-top: 2px solid #ddf3ff;
+      }
+    }
+
+  }
+
+  .navbar-brand {
+    img {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 50px;
+    }
+  }
+
+  .logo {
+    max-width: 420px;
+    width: 100%;
+
+    @media (min-width: 576px) {
+      margin-right: 6rem;
+    }
+  }
+}
+
+header.inner-pages {
+
+}
+
+// Footer
+.footer {
+  line-height: 60px;
+  background: #081a2c;
+  .wrap-footer {
+    border-bottom: 2px solid #ddf2ff;
+    margin-bottom: 1rem;
+  }
+
+  .footer-contact {
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
+    padding: 15px;
+    color: #fff;
+    border-top: 2px solid #e1f2fe;
+  }
+}
+
+.nav-touch {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: 60px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 10px 10px 40px 20px;
+  cursor: pointer;
+  z-index: 789997;
+}
+
+.nav-touch-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 789897;
+  background: #16222A; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #3A6073, #16222A); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  ul {
+    list-style-type: none;
+    padding: 6rem 5rem;
+    color: #fff;
+    font-size: 24px;
+    li {
+      margin-bottom: 40px;
+      a {
+        color: #fff;
+      }
+      a:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+}
+
+.nav-touch-content.closed {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  ul {
+    transform: translate(0px, 40px);
+    transition: transform 0.4s ease;
+  }
+}
+
+.nav-touch-content.open {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  pointer-events: auto;
+  ul {
+    transform: translate(0px, 0px);
+    transition: transform 0.4s ease;
+  }
+}
+
+/* Blog Main */
+
+.blog-main {
+  h3 a:after {
+    background: url("../assets/title.png");
+    content: "";
+    width: 100%;
+    height: 7px;
+    display: block;
+    margin-top: 5px;
+  }
+  .read-more {
+    padding: 5px 10px;
+    border: 1px solid #00295a;
+    background: #00295a;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: all 350ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
+
+  .read-more:hover {
+    background: #fff;
+    border-color: #00295a;
+    color: #00295a;
+  }
+}
+
+/* Single Post */
+.single-post {
+  .title {
+    margin-bottom: 20px;
+  }
+  .title:after {
+    background: url("../assets/title.png");
+    content: "";
+    width: 100%;
+    height: 7px;
+    display: block;
+    margin-top: 5px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+// Contact
+
+.map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// Articles
+
+
+a.article-logo img {
+  max-width: 200px;
+}
+
+// Pagination
+.wrap-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#page-numbers {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+#page-numbers li {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: all 350ms ease;
+}
+
+#page-numbers li:hover {
+  background: rgba(11, 41, 90, 0.14);
+}
+
+#page-numbers li.active {
+  background: #0b295a;
+  color: #fff;
+}
+
+#page-numbers li:last-child {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-right: -1px;
+}
+
+#page-numbers li:first-child {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: -1px;
+}
+
+@media (max-width: 575px) {
+  #page-numbers {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    z-index: 87;
+    transform: translateY(100%);
+    li {
+      padding: 10px 20px;
+      background: #fff;
+    }
+  }
+}
+
+.sidebar-title {
+  color: #31517b;
+}
+
